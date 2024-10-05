@@ -1,0 +1,52 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.canvasContainer {
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.uploadButton, .exportButton {
+    background-color: #0070f3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover, .exportButton:hover {
+    background-color: #005bb5;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.uploadLabel {
+    background-color: #0070f3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.uploadLabel:hover {
+    background-color: #005bb5;
+}
