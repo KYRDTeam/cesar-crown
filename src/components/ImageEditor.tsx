@@ -86,8 +86,18 @@ const ImageEditor = () => {
   };
 
   const exportImage = () => {
-    if (stageRef.current) {
+    if (stageRef.current && transformerRef.current) {
+      // Hide the transformer
+      transformerRef.current.nodes([]);
+      transformerRef.current.getLayer()?.batchDraw();
+
+      // Export the image
       const dataURL = stageRef.current.toDataURL();
+
+      // Show the transformer again
+      transformerRef.current.getLayer()?.batchDraw();
+
+      // Create a link and trigger the download
       const link = document.createElement('a');
       link.download = 'edited-image.png';
       link.href = dataURL;
