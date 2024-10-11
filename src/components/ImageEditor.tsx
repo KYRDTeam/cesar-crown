@@ -4,6 +4,11 @@ import { useRef, useEffect, useState } from 'react';
 import Konva from 'konva';
 import styles from '../styles/Home.module.css';
 
+const getImagePath = (imageName: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/cesar-crown' : '';
+  return `${basePath}/${imageName}`;
+};
+
 const ImageEditor = () => {
   const stageRef = useRef<Konva.Stage | null>(null);
   const layerRef = useRef<Konva.Layer | null>(null);
@@ -208,9 +213,9 @@ const ImageEditor = () => {
         <label htmlFor="image-upload" className={styles.uploadLabel}>Upload Image</label>
       </form>
       <div id="container" className={styles.canvasContainer}></div>
-      <button className={styles.exportButton} onClick={() => addGear('/crown.png')}>Add Crown</button>
-      <button className={styles.exportButton} onClick={() => addGear('/red-saber.png')}>Add Red Saber</button>
-      <button className={styles.exportButton} onClick={() => addGear('/green-saber.png')}>Add Green Saber</button>
+      <button className={styles.exportButton} onClick={() => addGear(getImagePath('crown.png'))}>Add Crown</button>
+      <button className={styles.exportButton} onClick={() => addGear(getImagePath('red-saber.png'))}>Add Red Saber</button>
+      <button className={styles.exportButton} onClick={() => addGear(getImagePath('green-saber.png'))}>Add Green Saber</button>
       <button className={styles.exportButton} onClick={exportImage}>Export Image</button>
     </div>
   );
