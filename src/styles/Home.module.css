@@ -5,8 +5,10 @@
 
 .canvasContainer {
     border: 1px solid #000;
-    display: inline-block;
+    display: block;
     margin: 20px auto;
+    max-width: 600px;
+    overflow: hidden;
 }
 
 .uploadButton, .exportButton {
