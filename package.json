@@ -2,13 +2,13 @@
   "name": "cesar-crown",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://KYRDTeam.github.io/cesar-crown",
+  "homepage": "https://kyrdteam.github.io/cesar-crown",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "build": "next build && touch ./out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "canvas": "^2.11.2",
