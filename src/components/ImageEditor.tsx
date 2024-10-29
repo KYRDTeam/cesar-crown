@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Konva from 'konva';
 import styles from '../styles/Home.module.css';
 
-const getImagePath = (imageName: string) => {
+export const getImagePath = (imageName: string) => {
   const basePath = process.env.NODE_ENV === 'production' ? '/cesar-crown' : '';
   return `${basePath}/${imageName}`;
 };
@@ -207,7 +207,7 @@ const ImageEditor = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Image Editor</h1>
+      <h1>$CESAR CRAFT</h1>
       <form id="upload-form">
         <input type="file" id="image-upload" accept="image/*" onChange={handleImageUpload} className={styles.hiddenFileInput} />
         <label htmlFor="image-upload" className={styles.uploadLabel}>Upload Image</label>
